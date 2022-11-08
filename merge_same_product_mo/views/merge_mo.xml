@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_mo_merge_form" model="ir.ui.view">
+            <field name="name">mo.mergeform</field>
+            <field name="model">mo.merge</field>
+            <field name="arch" type="xml">
+                <form>
+                    <footer>
+                        <button name="do_merge" string="_Apply" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="mo_merge_action" model="ir.actions.act_window">
+            <field name="name">Merge MO</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mo.merge</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem action="mo_merge_action"
+            id="menu_mo_merge_action"
+            parent="mrp.menu_mrp_manufacturing"
+            sequence="2"/>
+    </data>
+</openerp>
