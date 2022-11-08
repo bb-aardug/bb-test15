@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_mrp_work_type" model="ir.actions.act_window">
+            <field name="name">Mrp Worktype</field>
+            <field name="res_model">mrp.worktype</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Bill of Materials -->
+        <record id="mrp_bom_form_view_inh" model="ir.ui.view">
+            <field name="name">mrp.bom.form.inh</field>
+            <field name="model">mrp.bom</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='company_id']" position="after">
+	                <field name="x_aa_bb_work_type_id"/>
+	            </xpath>
+	        </field>
+	    </record>
+
+	    <record id="mrp_production_form_view_inh" model="ir.ui.view">
+            <field name="name">mrp.production.form.inh</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='company_id']" position="after">
+	                <field name="x_aa_bb_work_type_id"/>
+	            </xpath>
+	        </field>
+	    </record>
+
+
+
+        <record id="mrp_work_type_form_view" model="ir.ui.view">
+            <field name="name">mrp.work.type.form</field>
+            <field name="model">mrp.worktype</field>
+            <field name="arch" type="xml">
+                <form string="Fiscal Position">
+                    <group>
+                        <field name="x_aa_bb_name"></field>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="mrp_work_type_tree" model="ir.ui.view">
+            <field name="name">mrp.work.type.tree</field>
+            <field name="model">mrp.worktype</field>
+            <field name="arch" type="xml">
+                <tree string="Mrp Work Types">
+                    <field name="x_aa_bb_name"/>
+                </tree>
+            </field>
+        </record>
+
+        <menuitem
+            action="action_mrp_work_type"
+            id="menu_action_mrp_work_type_form"
+            parent="mrp.mrp_planning_menu_root" sequence="3"/>
+
+	</data>
+</odoo>

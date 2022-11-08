@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+mrp_work_type.access_mrp_worktype,access_mrp_worktype,mrp_work_type.model_mrp_worktype,base.group_user,1,1,1,1
