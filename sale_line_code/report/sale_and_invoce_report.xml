@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- invoice report -->
+        <!-- Use full-->
+        <template id="add_invoice_document" inherit_id="account.report_invoice_document">
+            <xpath expr="//div[@class='page']/table/thead/tr/th[1]" position="before">
+                <th><b>SO. Date</b></th>
+                <th><b>SO. Line Ref.</b></th>
+            </xpath>
+            <xpath expr="//div[@class='page']/table/tbody/t/tr/t/td[1]" position="before">
+                <t t-foreach="lines" t-as="line">
+                <td><span t-field="line.x_aa_bb_order_date" t-field-options="{'format': 'dd-MM-yyyy'}" /></td>
+                <td><span t-field="line.x_aa_bb_customer_ref_no" /></td>
+                </t>
+            </xpath>
+            <xpath expr="//div[@class='page']/div[2]/div[1]" position="replace">
+                <div></div>
+            </xpath>
+        </template>
+        <!-- Use full-->
+        <!-- sale report -->
+        <template id="add_saleorder_document" inherit_id="sale.report_saleorder_document">
+            <xpath expr="//div[@class='page']/table/thead/tr/th[1]" position="before">
+                <th>SO. Date</th>
+                <th>SO. Line Ref.</th>
+            </xpath>
+            <xpath expr="//div[@class='page']/table/tbody/t/tr/t/td[1]" position="before">
+                <t t-foreach="doc.order_line" t-as="line">
+                    <td><span t-field="line.x_aa_bb_order_date" t-options='{"format": "dd-MM-yyyy"}' /></td>
+                    <td><span t-field="line.x_aa_bb_customer_ref_no"/></td>
+                </t>
+            </xpath>
+        </template>
+    </data>
+</odoo>
