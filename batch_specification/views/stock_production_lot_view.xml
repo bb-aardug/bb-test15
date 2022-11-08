@@ -1,0 +1,28 @@
+<odoo>
+    <data>
+        <record id="view_production_lot_form_inherit" model="ir.ui.view">
+            <field name="name">stock.production.lot.form</field>
+            <field name="model">stock.production.lot</field>
+            <field name="inherit_id" ref="stock.view_production_lot_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='main_group']" position="inside">
+                    <group>
+                        <field name="x_aa_bb_operation_id"/>
+                    </group>
+                </xpath>
+                <xpath expr="//page[@name='description']" position="before">
+                    <page string="Batch Specification" name="batch_specification">
+                        <field name="x_aa_bb_product_field_ids" options="{'no_edit': True, 'no_create': True, 'no_open': True}">
+                            <tree editable="top" create="false" delete="false">
+                                <field name="x_aa_bb_name"/>
+                                <field name="x_aa_bb_maximum"/>
+                                <field name="x_aa_bb_minimum"/>
+                                <field name="x_aa_bb_actual_value"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

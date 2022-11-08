@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="product_field_config_tree" model="ir.ui.view">
+            <field name="name">product.field.config.tree</field>
+            <field name="model">product.field.config</field>
+            <field name="arch" type="xml">
+                <tree string="Product Field">
+                    <field name="x_aa_bb_name"/>
+                    <field name="x_aa_bb_maximum"/>
+                    <field name="x_aa_bb_minimum"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="product_field_config_form" model="ir.ui.view">
+            <field name="name">product.field.config.form</field>
+            <field name="model">product.field.config</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="x_aa_bb_name" placeholder="Name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="x_aa_bb_maximum"/>
+                            </group>
+                            <group>
+                                <field name="x_aa_bb_minimum"/>
+                                <field name="x_aa_bb_check_required"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="product_field_configuration" model="ir.actions.act_window">
+            <field name="name">Product Field configuration </field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.field.config</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="product_field" model="ir.actions.act_window">
+            <field name="name">Product Field</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.field</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="product_field_configuration" id="menu_product_field_confi" name="Product Field Configuration" parent="stock.menu_product_in_config_stock" sequence="3"/>
+    </data>
+</odoo>
