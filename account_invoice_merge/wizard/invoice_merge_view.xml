@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_invoice_merge" model="ir.ui.view">
+        <field name="name">Merger Partner Invoice</field>
+        <field name="model">account.move.merge</field>
+        <field name="arch" type="xml">
+            <form string="Merge Partner Invoice">
+                <group>
+                    <separator
+                        string="Are you sure you want to merge these invoices?"
+                        colspan="4" />
+                    <p>
+                        Please note that:<br/><br/>
+                        Invoices will only be merged if:<br/>
+                        * Invoices are in state 'draft'.<br/>
+                        * Invoices belong to the same partner.<br/>
+                        * Invoices have the same company, partner, address,
+                        currency, journal, salesman, account and type.<br/><br/>
+                        Lines will only be merged if:<br/>
+                        * Invoice lines are exactly the same except for the
+                        product, quantity and unit.<br/>
+                    </p>
+                </group>
+                <group name="options">
+                    <field name="x_aa_bb_keep_references"/>
+                    <field name="x_aa_bb_date_invoice"/>
+                </group>
+                <footer>
+                    <button name="merge_invoices" string="Merge Invoices"
+                        type="object" class="oe_highlight" />
+                    or
+                    <button string="Cancel" class="oe_link"
+                        special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Open Settings from Purchase Journal to configure mail servers -->
+    <record id="action_view_account_move_merge" model="ir.actions.act_window">
+        <field name="name">Merge Partner Invoice</field>
+        <field name="res_model">account.move.merge</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="account.model_account_move" />
+    </record>
+
+</odoo>
+
