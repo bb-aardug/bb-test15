@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<odoo>
+    <data>
+        <template id="report_lot_barcode_small">
+            <t t-call="web.basic_layout">
+                <t t-foreach="docs" t-as="o">
+                    <t>
+                        <div class="page">
+                            <div class="lot_custom">
+                                <div class="product-center-align">
+                                    <t t-esc="o.product_id.name"/>
+                                </div>
+                                <p class="lot-para">Ingrediënten: zie onderkant</p>
+                                <span style="font-size: 24px;">
+                                    Inhoud: <t t-esc="o.product_id.weight"/>g
+                                </span>
+                                <br/>
+                                <div class="text-right">
+                                    <span style="font-size: 24px;">
+                                        <t t-esc="o.company_id.currency_id.symbol"/> <t t-esc="o.product_id.lst_price"/>
+                                    </span>
+                                </div>
+                                <p class="lot-para" style="font-weight: bold;">Gekoeld bewaren bij max 7°C</p>
+                                <p class="lot-para" style="font-weight: bold;">ten minste houdbaar tot:
+                                    <t t-esc="o.use_date" t-options='{"widget": "date"}'/>
+                                </p>
+                                <table style="font-weight: bold;">
+                                    <tr>
+                                        <td style="width:60%;">Product partijcode:</td>
+                                        <td class="text-right" style="width:40%;"><t t-esc="o.name"/></td>
+                                    </tr>
+                                </table>
+                                <p class="lot-para">Gemaakt in een bedrijf waar pinda's en noten worden verwerkt</p>
+                            </div>
+                            <div class="lot_custom">
+                                <div class="product-center-align" >
+                                    <t t-esc="o.product_id.name"/>
+                                </div>
+                                <p class="lot-para"><b>Ingrediënten:</b></p>
+                                <p class="lot-para fixed-line-1" style="font-size:10px;" t-esc="o.product_id.x_aa_bb_text_block1"/>
+                                <p class="lot-para"><b>Voedingswaarde:</b></p>
+                                <p class="fixed-line-2 lot-para" style="font-size:10px;" t-esc="o.product_id.x_aa_bb_text_block2"/>
+                                <div class="text-center" style="margin-bottom: -10px;">
+                                    <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 100)" style="width:150px;height:28px;margin-top: 8px;"/>
+                                    <p class="text-center" t-field="o.name"></p>
+                                </div>
+                                <p class="lot-para" style="font-weight: bold;font-size:10px;">B en B Snijderij Plankert 12a  5721 VG Asten</p>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <record id="action_report_lot_barcode_small" model="ir.actions.report">
+            <field name="name">Lot BarCode Small</field>
+            <field name="model">stock.production.lot</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">lot_barcode.report_lot_barcode_small</field>
+            <field name="report_file">lot_barcode.report_lot_barcode_small</field>
+            <field name="binding_model_id" ref="stock.model_stock_production_lot"/>
+            <field name="binding_type">report</field>
+        </record>
+
+
+    </data>
+</odoo>

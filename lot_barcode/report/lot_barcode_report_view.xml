@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_lot_barcode_inherit" inherit_id="stock.report_lot_label">
+            <xpath expr="//div[hasclass('page')]" position="replace">
+            <div class="page" position="inside">
+                <div class="oe_structure"/>
+
+                <div style="height:107mm; width:120mm; border: 1px solid black; padding: 5px;">
+
+                <table style="border-spacing: 0; margin-bottom: 0;">
+                    <tbody>
+                        <tr>
+                            <td style="verticle-align: top;">
+                                <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.product_id.barcode, 500, 160)" style="width: 440px; height:95px;"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span t-field="o.product_id.name" style="font-size: 18px; word-wrap: break-word;"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span t-field="o.name" style="font-size: 28px;"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="pull-left" style="width: 60%; font-size: 17px;">Best before Date</span>
+                                <span t-if="o.use_date" t-field="o.use_date" t-field-options="{&quot;format&quot;: &quot;dd-MM-yyyy&quot;}" style="font-size: 17px;"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <!-- <br/> -->
+                                <table style="border-spacing: 0; margin-bottom: 0; width: 100%;" class="table">
+                                    <t t-set="line" t-value="1"/>
+                                    <tr style="background-color: #edf0f0;">
+                                        <th style="width: 60%; font-size: 11px; font-weight: bold; padding: 2px;">Name</th>
+                                        <th style="width: 40%; font-size: 11px; font-weight: bold; padding: 2px;">Actual Value</th>
+                                    </tr>
+                                    <t t-foreach="o.x_aa_bb_product_field_ids" t-as="product_field">
+                                        <t t-set="even_odd" t-value="line%2"/>
+                                        <tr>
+                                            <t t-if="even_odd != 0">
+                                                <td style="width: 75%; font-size: 10px; background-color: white; padding: 2px;"><span t-field="product_field.x_aa_bb_name"/></td>
+                                                <td style="width: 25%; font-size: 10px; background-color: white; padding: 2px;"><span t-field="product_field.x_aa_bb_actual_value"/></td>
+                                            </t>
+                                            <t t-if="even_odd == 0">
+                                                <td style="width: 75%; font-size: 10px; background-color: #edf0f0; padding: 2px;"><span t-field="product_field.x_aa_bb_name"/></td>
+                                                <td style="width: 25%; font-size: 10px; background-color: #edf0f0; padding: 2px;"><span t-field="product_field.x_aa_bb_actual_value"/></td>
+                                            </t>
+                                        </tr>
+                                        <t t-set="line" t-value="line+1"/>
+                                    </t>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+            </xpath>
+        </template>
+
+        <record id="stock.action_report_lot_label" model="ir.actions.report">
+            <field name="name">Lot Barcode Big</field>
+              <field name="print_report_name">'Lot Barcode Big - %s' % object.name</field>
+        </record>
+
+    </data>
+</odoo>

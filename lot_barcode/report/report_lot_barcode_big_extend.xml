@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_lot_barcode_big_extend">
+            <t t-call="web.basic_layout">
+                <t t-foreach="docs" t-as="d">
+                        <t>
+                            <div class="page">
+                                <div class="oe_structure"/>
+
+                                <div style="height:100mm; width:120mm; border: 1px solid black; padding: 5px;">
+
+                                    <table style="border-spacing: 0; margin-bottom: 0;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="verticle-align: top;">
+                                                    <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', d.product_id.barcode, 500, 160)" style="width: 440px; height:95px;"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span t-field="d.product_id.name" style="font-size: 18px; word-wrap: break-word;"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="pull-left" style="width: 60%; font-size: 17px;">Best before Date</span>
+                                                    <span t-if="d.expiration_date" t-field="d.expiration_date" t-field-options="{&quot;format&quot;: &quot;dd-MM-yyyy&quot;}" style="font-size: 17px;"/>
+                                                </td>
+                                            </tr>
+                                            <tr style="height:5mm;"></tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="pull-left" style="width: 60%; font-size: 17px;">Arrival Date:</span>
+                                                    <span t-esc="d.picking_id.date"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="pull-left" style="width: 60%; font-size: 17px;">Herkomst:</span>
+                                                    <span t-esc="d.origin"></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="pull-left" style="width: 60%; font-size: 17px;">Supplier:</span>
+                                                    <span t-esc="d.picking_id.partner_id.name"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="pull-left" style="width: 60%; font-size: 17px;">Pack Type:</span>
+                                                    <span t-esc="d.x_aa_bb_pack_type_id.name"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="pull-left" style="width: 60%; font-size: 17px;">Pack Quantity:</span>
+                                                    <span t-esc="d.qty_done"/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+
+        <record id="action_report_lot_barcode_big_extend" model="ir.actions.report">
+            <field name="name">Lot BarCode Big Extend</field>
+            <field name="model">stock.move.line</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">lot_barcode.report_lot_barcode_big_extend</field>
+            <field name="report_file">lot_barcode.report_lot_barcode_big_extend</field>
+            <field name="binding_model_id" ref="stock.model_stock_move_line"/>
+            <field name="binding_type">report</field>
+            <field name="paperformat_id"  ref="lot_barcode.paperformat_barcode_big_extend"/>
+        </record>
+
+
+    </data>
+</odoo>

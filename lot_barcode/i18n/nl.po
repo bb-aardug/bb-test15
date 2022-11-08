@@ -1,0 +1,129 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_sale
+# 
+# Translators:
+# Yenthe Van Ginneken <yenthespam@gmail.com>, 2016
+# Eric Geens <ericgeens@yahoo.com>, 2016
+# Martin Trigaux <mat@odoo.com>, 2016
+# Erwin van der Ploeg <erwin@odooexperts.nl>, 2016
+# Cas Vissers <casvissers@brahoo.nl>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-16 13:04+0000\n"
+"PO-Revision-Date: 2017-11-16 13:04+0000\n"
+"Last-Translator: Cas Vissers <casvissers@brahoo.nl>, 2016\n"
+"Language-Team: Dutch (https://www.transifex.com/odoo/teams/41243/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: lot_barcode
+#: model:ir.ui.view,arch_db:lot_barcode.report_lot_barcode_inherit
+msgid "Best before Date"
+msgstr "Tenminste houdbaar tot datum"
+
+#. module: lot_barcode
+#: model:ir.ui.view,arch_db:lot_barcode.report_lot_barcode_inherit
+msgid "Product"
+msgstr "Artikel"
+
+#. module: lot_barcode
+#: model:ir.ui.view,arch_db:lot_barcode.report_lot_barcode_inherit
+msgid "Name"
+msgstr "Naam"
+
+#. module: lot_barcode
+#: model:ir.ui.view,arch_db:lot_barcode.report_lot_barcode_inherit
+msgid "Actual Value"
+msgstr "Werkelijke waarde"
+
+#. module: lot_barcode
+#: model:ir.ui.view,arch_db:lot_barcode.report_lot_barcode_inherit
+msgid "BATCH SPECIFICATION"
+msgstr "Batchspecificatie"
+
+#. module: batch_specification
+#: model:ir.ui.view,arch_db:batch_specification.view_production_lot_form_inherit
+msgid "Batch Specification"
+msgstr "Batchspecificatie"
+
+#. module: batch_specification
+#: model:ir.model.fields,field_description:batch_specification.field_product_field_name
+msgid "Name"
+msgstr "Naam"
+
+#. module: batch_specification
+#: model:ir.model.fields,field_description:batch_specification.field_product_field_maximum
+msgid "Maximum"
+msgstr "maximaal"
+
+#. module: batch_specification
+#: model:ir.model.fields,field_description:batch_specification.field_product_field_actual_value
+msgid "Actual Value"
+msgstr "Werkelijke waarde"
+
+#. module: lot_barcode
+#: model:ir.ui.view,arch_db:lot_barcode.report_lot_barcode_big
+msgid "<span class=\"pull-left\" style=\"width: 60%; font-size: 17px;\">Arrival Date:</span>"
+msgstr "<span class=\"pull-left\" style=\"width: 60%; font-size: 17px;\">Datum Ontvangst:</span>"
+
+#. module: lot_barcode
+#: model:ir.ui.view,arch_db:lot_barcode.report_lot_barcode_big
+msgid "<span class=\"pull-left\" style=\"width: 60%; font-size: 17px;\">Origin:</span>"
+msgstr "<span class=\"pull-left\" style=\"width: 60%; font-size: 17px;\">Herkomst:</span>"
+
+#. module: lot_barcode
+#: model:ir.ui.view,arch_db:lot_barcode.report_lot_barcode_big
+msgid "<span class=\"pull-left\" style=\"width: 60%; font-size: 17px;\">Pack Type:</span>"
+msgstr "<span class=\"pull-left\" style=\"width: 60%; font-size: 17px;\">Type verpakking:</span>"
+
+#. module: lot_barcode
+#: model:ir.ui.view,arch_db:lot_barcode.report_lot_barcode_big
+msgid "<span class=\"pull-left\" style=\"width: 60%; font-size: 17px;\">Supplier:</span>"
+msgstr "<span class=\"pull-left\" style=\"width: 60%; font-size: 17px;\">Leverancier:</span>"
+
+#. module: lot_barcode
+#: model:ir.ui.view,arch_db:lot_barcode.report_lot_barcode_big_extend
+msgid "<span class=\"pull-left\" style=\"width: 60%; font-size: 17px;\">Arrival Date:</span>"
+msgstr "<span class=\"pull-left\" style=\"width: 60%; font-size: 17px;\">Datum Ontvangst:</span>"
+
+#. module: lot_barcode
+#: model:ir.ui.view,arch_db:lot_barcode.report_lot_barcode_big
+#: model:ir.ui.view,arch_db:lot_barcode.report_lot_barcode_big_extend
+msgid "<span class=\"pull-left\" style=\"width: 60%; font-size: 17px;\">Best before Date</span>"
+msgstr "<span class=\"pull-left\" style=\"width: 60%; font-size: 17px;\">Tenminste houdbaar tot</span>"
+
+#. module: lot_barcode
+#: model:ir.ui.view,arch_db:lot_barcode.report_lot_barcode_big_extend
+msgid "<span class=\"pull-left\" style=\"width: 60%; font-size: 17px;\">Origin:</span>"
+msgstr "<span class=\"pull-left\" style=\"width: 60%; font-size: 17px;\">Herkomst:</span>"
+
+#. module: lot_barcode
+#: model:ir.ui.view,arch_db:lot_barcode.report_lot_barcode_big_extend
+msgid "<span class=\"pull-left\" style=\"width: 60%; font-size: 17px;\">Pack Amount:</span>"
+msgstr "<span class=\"pull-left\" style=\"width: 60%; font-size: 17px;\">Verp. Aantal:</span>"
+
+#. module: lot_barcode
+#: model:ir.ui.view,arch_db:lot_barcode.report_lot_barcode_big_extend
+msgid "<span class=\"pull-left\" style=\"width: 60%; font-size: 17px;\">Pack Quantity:</span>"
+msgstr "<span class=\"pull-left\" style=\"width: 60%; font-size: 17px;\">Verp. Hoeveelheid:</span>"
+
+#. module: lot_barcode
+#: model:ir.ui.view,arch_db:lot_barcode.report_lot_barcode_big_extend
+msgid "<span class=\"pull-left\" style=\"width: 60%; font-size: 17px;\">Pack Type:</span>"
+msgstr "<span class=\"pull-left\" style=\"width: 60%; font-size: 17px;\">Type verpakking:</span>"
+
+#. module: lot_barcode
+#: model:ir.ui.view,arch_db:lot_barcode.report_lot_barcode_big_extend
+msgid "<span class=\"pull-left\" style=\"width: 60%; font-size: 17px;\">Pack Weight:</span>"
+msgstr "<span class=\"pull-left\" style=\"width: 60%; font-size: 17px;\">Verp. Gewicht:</span>"
+
+#. module: lot_barcode
+#: model:ir.ui.view,arch_db:lot_barcode.report_lot_barcode_big_extend
+msgid "<span class=\"pull-left\" style=\"width: 60%; font-size: 17px;\">Supplier:</span>"
+msgstr "<span class=\"pull-left\" style=\"width: 60%; font-size: 17px;\">Leverancier:</span>"
