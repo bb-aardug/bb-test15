@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- sale form view -->
+         <record id="sequence_view_inherit" model="ir.ui.view">
+            <field name="name">ir.sequence.inherit</field>
+            <field name="model">ir.sequence</field>
+            <field name="inherit_id" ref="base.sequence_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page/group[2]/group" position="inside">
+                    <span colspan="2">Trademark : %%(shortcode)s</span>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

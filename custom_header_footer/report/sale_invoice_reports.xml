@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- paperformat  -->
+    <record id="sale.action_report_saleorder" model="ir.actions.report">
+        <field name="paperformat_id" ref="custom_header_footer.paperformat_custom_header_footer"/>
+    </record>
+    <record id="account.account_invoices" model="ir.actions.report">
+        <field name="paperformat_id" ref="custom_header_footer.paperformat_custom_header_footer"/>
+    </record>
+    <record id="account.account_invoices_without_payment" model="ir.actions.report">
+        <field name="paperformat_id" ref="custom_header_footer.paperformat_custom_header_footer"/>
+    </record>
+
+</odoo>

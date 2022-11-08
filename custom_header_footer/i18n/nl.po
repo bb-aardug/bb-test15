@@ -1,0 +1,32 @@
+# Translation of Odoo Server.   
+# This file contains the translation of the following modules:
+#   * custom_header_footer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-05 10:53+0000\n"
+"PO-Revision-Date: 2021-09-14 12:18+0000\n"
+"Last-Translator: Erwin van der Ploeg <erwin@odooexperts.nl>, 2021\n"
+"Language-Team: Dutch (https://www.transifex.com/odoo/teams/41243/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: custom_header_footer
+#: model:ir.model.fields,field_description:custom_header_footer.field_res_company__xaa_aa_for_all_report
+msgid "Use images for all report"
+msgstr "Gebruik afbeeldingen voor alle rapporten"
+
+#. module: custom_header_footer
+#: model_terms:ir.ui.view,arch_db:custom_header_footer.sequence_view_inherit
+msgid "<span colspan=\"2\">Trademark : %(shortcode)s</span>"
+msgstr "<span colspan=\"2\">Handelsmerk : %(shortcode)s</span>"
+
+#. module: custom_header_footer
+#: model:ir.model,name:custom_header_footer.model_ir_sequence
+msgid "Sequence"
+msgstr "Reeks"
