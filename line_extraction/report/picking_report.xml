@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- stock picking operation-->
+        <template id="add_report_picking" inherit_id="stock.report_picking">
+            <xpath expr="//div[@class='page']/table/thead/tr/th[1]" position="after">
+                <th t-if="'OUT' in o.name"><strong>Description</strong></th>
+            </xpath>
+            <xpath expr="//div[@class='page']/table/tbody/t/tr/td[1]" position="after">
+                <t t-foreach="o.move_line_ids_without_package" t-as="ml">
+                    <td t-if="'OUT' in o.name"><span t-field="ml.x_aa_bb_product_desc" /></td>
+                </t>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>
