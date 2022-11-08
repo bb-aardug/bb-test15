@@ -1,0 +1,99 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_sale
+# 
+# Translators:
+# Yenthe Van Ginneken <yenthespam@gmail.com>, 2016
+# Eric Geens <ericgeens@yahoo.com>, 2016
+# Martin Trigaux <mat@odoo.com>, 2016
+# Erwin van der Ploeg <erwin@odooexperts.nl>, 2016
+# Cas Vissers <casvissers@brahoo.nl>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-16 13:04+0000\n"
+"PO-Revision-Date: 2017-11-16 13:04+0000\n"
+"Last-Translator: Cas Vissers <casvissers@brahoo.nl>, 2016\n"
+"Language-Team: Dutch (https://www.transifex.com/odoo/teams/41243/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+
+#. module: packaging_extension
+#: model:ir.model.fields,field_description:packaging_extension.field_stock_pack_operation_pack_weight
+msgid "Pack Weight"
+msgstr "verp. gewicht"
+
+#. module: packaging_extension
+#: model:ir.ui.view,arch_db:packaging_extension.inherit_delivery_document
+msgid "<strong>Pack Amount</strong>"
+msgstr "<strong>Verp. aantal</strong>"
+
+#. module: packaging_extension
+#: model:ir.ui.view,arch_db:packaging_extension.inherit_delivery_document
+msgid "<strong>Pack Type</strong>"
+msgstr "<strong>Verp. pakking</strong>"
+
+#. module: packaging_extension
+#: model:ir.ui.view,arch_db:packaging_extension.inherit_delivery_document
+msgid "<strong>Pack Weight</strong>"
+msgstr "<strong>Verp. gewicht</strong>"
+
+#. module: packaging_extension
+#: model:ir.model,name:packaging_extension.model_account_invoice
+msgid "Invoice"
+msgstr "Factuur"
+
+#. module: packaging_extension
+#: model:ir.model,name:packaging_extension.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Factuurregel"
+
+#. module: packaging_extension
+#: model:ir.model.fields,field_description:packaging_extension.field_account_invoice_line_pack_amount
+#: model:ir.model.fields,field_description:packaging_extension.field_purchase_order_line_pack_amount
+#: model:ir.model.fields,field_description:packaging_extension.field_stock_move_pack_amount
+#: model:ir.model.fields,field_description:packaging_extension.field_stock_pack_operation_pack_amount
+#: model:ir.ui.view,arch_db:packaging_extension.add_invoice_documents
+#: model:ir.ui.view,arch_db:packaging_extension.add_purchaseorder_documents
+msgid "Pack Amount"
+msgstr "verp. aantal"
+
+#. module: packaging_extension
+#: model:ir.model.fields,field_description:packaging_extension.field_account_invoice_line_pack_type
+#: model:ir.model.fields,field_description:packaging_extension.field_purchase_order_line_pack_type
+#: model:ir.model.fields,field_description:packaging_extension.field_stock_move_pack_type
+#: model:ir.model.fields,field_description:packaging_extension.field_stock_pack_operation_pack_type
+#: model:ir.ui.view,arch_db:packaging_extension.add_invoice_documents
+#: model:ir.ui.view,arch_db:packaging_extension.add_purchaseorder_documents
+msgid "Pack Type"
+msgstr "Type van verpakking"
+
+#. module: packaging_extension
+#: model:ir.model.fields,field_description:packaging_extension.field_account_invoice_line_pack_weight
+#: model:ir.model.fields,field_description:packaging_extension.field_purchase_order_line_pack_weight
+#: model:ir.model.fields,field_description:packaging_extension.field_stock_move_pack_weight
+#: model:ir.model.fields,field_description:packaging_extension.field_stock_pack_operation_pack_weight
+#: model:ir.ui.view,arch_db:packaging_extension.add_invoice_documents
+#: model:ir.ui.view,arch_db:packaging_extension.add_purchaseorder_documents
+msgid "Pack Weight"
+msgstr "verp. gewicht"
+
+#. module: packaging_extension
+#: model:ir.model,name:packaging_extension.model_stock_pack_operation
+msgid "Packing Operation"
+msgstr "Verpakking bewerking"
+
+#. module: packaging_extension
+#: model:ir.model,name:packaging_extension.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Inkooporderregel"
+
+#. module: packaging_extension
+#: model:ir.model,name:packaging_extension.model_stock_move
+msgid "Stock Move"
+msgstr "Voorraadmutatie"
